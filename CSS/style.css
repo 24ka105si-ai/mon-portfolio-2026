@@ -212,6 +212,231 @@ footer a:hover {
     transform: translateY(-3px);
 }
 
+/* --- Styles spécifiques à la page Contact --- */
 
+.contact-container {
+    max-width: 900px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h3 {
+    color: var(--violet-doux);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    color: var(--gris-fonce);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info a {
+    color: var(--violet-fonce);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-apps {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 15px;
+}
+
+.social-apps a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #e8e7ff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.social-apps a:hover {
+    background-color: var(--violet-doux);
+    color: white;
+}
+
+/* Formulaire */
+.contact-form {
+    flex: 1;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--gris-tres-fonce);
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris-clair);
+    border-radius: 5px;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: var(--violet-doux);
+}
+
+.contact-form button {
+    width: 100%;
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: var(--violet-fonce);
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .contact-container {
+        margin: 3rem auto;
+    }
+}
+
+
+/* --- PAGE PROJETS (Design Image) --- */
+
+.projets-header {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-image {
+    width: 100%;
+    height: 220px;
+    border-bottom: 5px solid var(--violet-doux); /* Barre violette sous l'image */
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.project-body h3 {
+    color: var(--violet-doux);
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-body p {
+    color: var(--gris-fonce);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+/* Badges (Tags) */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.tags li {
+    margin-left: 0; /* Override */
+    background-color: #F1F0FF;
+    color: var(--violet-doux);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Pied de carte (Liens) */
+.project-footer {
+    padding: 1.2rem 1.5rem;
+    border-top: 1px solid var(--gris-clair);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-footer a, 
+.project-footer span {
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-footer a:hover {
+    color: var(--violet-doux);
+}
 
 
