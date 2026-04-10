@@ -440,3 +440,252 @@ footer a:hover {
 }
 
 
+
+
+/* --- Styles Images Passions --- */
+
+.passions-header {
+    max-width: 1100px;
+    margin: 6rem auto 2rem;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.passions-header h2 {
+    font-size: clamp(2.3rem, 3vw, 3rem);
+    margin-bottom: 0.8rem;
+}
+
+.passions-header p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--gris-fonce);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.passions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+}
+
+@media (max-width: 1024px) {
+    .passions-grid {
+        grid-template-columns: repeat(2, minmax(260px, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .passions-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.passion-card {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 24px 70px rgba(35, 35, 70, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.passion-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 32px 90px rgba(35, 35, 70, 0.14);
+}
+
+.passion-image {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    position: relative;
+}
+
+.passion-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 45%, rgba(83, 78, 221, 0.14));
+    pointer-events: none;
+}
+
+.passion-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.passion-card:hover .passion-image img {
+    transform: scale(1.04);
+}
+
+.passion-body {
+    padding: 2rem 1.6rem 1.8rem;
+    text-align: center;
+}
+
+.passion-icon {
+    width: 64px;
+    height: 64px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(108, 97, 255, 0.12);
+    color: var(--violet-doux);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.passion-body h3 {
+    color: var(--violet-doux);
+    font-size: 1.35rem;
+    margin-bottom: 0.85rem;
+}
+
+.passion-body p {
+    color: var(--gris-fonce);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 720px) {
+    .passions-header {
+        margin-top: 4rem;
+    }
+
+    .passions-grid {
+        gap: 1.5rem;
+    }
+}
+
+
+
+
+/* --- SYSTÈME DE GRILLE UNIVERSEL --- */
+/* Ce bloc s'adapte à Projets.html, passions.html et divertissement.html */
+
+.projects-grid, .passions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+/* Style de la carte (Basé sur ton image de référence) */
+.project-card, .passion-card, article {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover, .passion-card:hover, article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(108, 99, 255, 0.15);
+}
+
+/* En-tête de carte avec image et bordure violette */
+.project-image, .passion-image, article > div:first-child {
+    width: 100%;
+    height: 220px;
+    border-bottom: 5px solid var(--violet-doux);
+}
+
+.project-image img, .passion-image img, article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Corps de la carte */
+.project-body, .passion-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-body h3, .passion-body h3, article h3 {
+    color: var(--violet-doux);
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-body p, .passion-body p, article p {
+    color: var(--gris-fonce);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Icônes pour les pages Passions et Divertissement */
+.passion-icon {
+    font-size: 2.2rem;
+    color: var(--violet-doux);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Badges de technologies (Tags) */
+.tags, .projects-grid ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.2rem;
+}
+
+.tags li, .projects-grid ul li {
+    margin-left: 0 !important;
+    background-color: #F1F0FF;
+    color: var(--violet-doux);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Pied de carte (Liens de projets ou informations) */
+.project-footer, article p:last-child {
+    padding: 1.2rem 1.5rem;
+    border-top: 1px solid var(--gris-clair);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fcfcfc;
+    margin-top: auto; /* Aligne le footer en bas */
+}
+
+.project-footer a, article p:last-child a {
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-footer a:hover, article p:last-child a:hover {
+    color: var(--violet-doux);
+}
+
+/* Header spécifique aux pages secondaires */
+.passions-header {
+    margin-top: 4rem;
+    text-align: center;
+}
